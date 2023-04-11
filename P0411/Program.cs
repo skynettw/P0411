@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace P0411
-{
+{  
     class Program
     {
 
@@ -41,9 +41,19 @@ namespace P0411
             Console.WriteLine();
             
         }
+
+        static void Prog3()
+        {
+            Car a = new Car("Toyota", "Vios", "Red");
+            Car b = new Car("BMW", "Z4", "Yellow");
+            a.ShowMe();
+            b.ShowMe();
+            a.Color="White";
+            a.ShowMe();
+        }
         static void Main(string[] args)
         {
-            Prog2();    
+            Prog3();    
             Console.ReadKey();
         }
     }
