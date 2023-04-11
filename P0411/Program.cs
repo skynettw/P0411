@@ -35,14 +35,15 @@ namespace P0411
             int n;
             Console.Write("n=");
             n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Fibonacci{0}={1}",
-                n,
-                Fib(n)
-                );
+            for(int i=0; i<=n; i++) {
+                Console.Write("{0} ",Fib(i));
+            }
+            Console.WriteLine();
+            
         }
         static void Main(string[] args)
         {
-            Prog1();    
+            Prog2();    
             Console.ReadKey();
         }
     }
