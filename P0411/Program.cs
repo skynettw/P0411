@@ -54,13 +54,33 @@ namespace P0411
         //請強化計算功能，加上所有你想到的運算操作
         static void HomeWork()
         {
+            string cmd;
             MyStack stk = new MyStack();
-            stk.Push(100);
-            stk.Push(200);
-            stk.Push(99);
             stk.Show();
-            stk.Pop();
-            stk.Show();
+            Console.Write(">>");
+            cmd = Console.ReadLine();
+            while (cmd!="q")
+            {
+                if (cmd=="+") //執行加法程式
+                {
+                    int x1 = stk.Pop();
+                    int x2 = stk.Pop();
+                    stk.Push(x1 + x2);
+
+                } else if (cmd == "-") //執行減法程式 
+                {
+                    int x1 = stk.Pop();
+                    int x2 = stk.Pop();
+                    stk.Push(x1 - x2);
+                } else
+                {
+                    stk.Push(Convert.ToInt32(cmd));
+                }
+                stk.Show();
+                Console.Write(">>");
+                cmd = Console.ReadLine();
+            }
+            Console.WriteLine("Bye!");
         }
         static void Main(string[] args)
         {
