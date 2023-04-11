@@ -13,8 +13,12 @@ namespace P0411
         }
         static void Prog1()
         {
-            Console.WriteLine("10!={0}",
-                Factorial(10)
+            int n;
+            Console.Write("n=");
+            n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("{0}!={1}",
+                n, 
+                Factorial(n)
                 );
         }
 
