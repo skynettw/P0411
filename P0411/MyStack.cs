@@ -37,5 +37,15 @@ namespace P0411
                 return -1;
             }
         }
+
+        public void Show()
+        {
+            Console.Write("Top:");
+            for (int i=top-1; i>=0; i--)
+            {
+                Console.Write("{0} ", data[i]);
+            }
+            Console.WriteLine();
+        }
     }
 }

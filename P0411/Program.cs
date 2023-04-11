@@ -48,12 +48,23 @@ namespace P0411
             Car b = new Car("BMW", "Z4", "Yellow");
             a.ShowMe();
             b.ShowMe();
-            a.Color="White";
             a.ShowMe();
+        }
+
+        //請強化計算功能，加上所有你想到的運算操作
+        static void HomeWork()
+        {
+            MyStack stk = new MyStack();
+            stk.Push(100);
+            stk.Push(200);
+            stk.Push(99);
+            stk.Show();
+            stk.Pop();
+            stk.Show();
         }
         static void Main(string[] args)
         {
-            Prog3();    
+            HomeWork();    
             Console.ReadKey();
         }
     }
